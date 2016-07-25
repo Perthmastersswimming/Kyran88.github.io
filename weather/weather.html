@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.3.2/css/weather-icons.min.css"/>
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+<script src="http://Kyran88.github.io/weather/weather.js"></script>
+<link rel="stylesheet" href="http://Kyran88.github.io/weather/weather.css" />
+<title>Weather App</title>
+</head>
+
+<body ng-app="myApp" ng-controller="MainCtrl">
+	<div class="cistern">
+		<div class="main-info">
+			<div class="temp">{{temp}} &#176;<span class="unit" ng-click="changeUnit()">{{unit}}</span></div>
+			<div class="city">{{city}}</div>
+			<div class="country">{{country}}</div>
+		</div>
+		<div class="icon"><i ng-class="getIcon()"></i></div>
+	</div>
+</body>
+</html>
