@@ -1,5 +1,3 @@
-jQuery(function($) {
-
 var model= {
 		userLang: "",
 		// Save preferred units here - either "Metric" or "Imp"
@@ -279,4 +277,3 @@ function capitalize(string) {
 	
 // Make the magic happen
 init();
-});
