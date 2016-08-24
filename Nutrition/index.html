@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nutrition Calculator</title>
+<link rel="stylesheet" href="Kyran88.github.io/Nutrition/index.css"/>
+<script src='Kyran88.github.io/Nutrition/index.js'></script> 
+<link rel="icon" type="image/ico" href="Kyran88.github.io/kyran favicon.ico"/>
+
+</head>
+<body>
+<div class="line"></div>
+            	<div id="input-fields">
+                <div style="margin-bottom:20px;"><h3>Input</h3></div>
+            	<form name="userInput">
+                	<div id="input-labels">
+                        <label for="riderWeight" class="nc-var-label">Rider Weight:</label>
+                        <label for="averagePower" class="nc-var-label">Average Power:</label>
+                    </div>
+                    <div id="input-var">
+                        <input type="text" name="riderWeight" id="riderWeight" onKeyDown="validateNumber(event);" onKeypress="{if (event.keyCode == 13) validateInputs();}"/>                   
+                        <input type="text" name="averagePower" id="averagePower" onKeyDown="validateNumber(event);" onKeypress="{if (event.keyCode == 13) validateInputs();}" />                    
+                    </div>
+                    <div id="button">
+                    	<input class="button" type="button" value="Calculate" name="calculate" onclick="validateInputs();"/>
+                    </div>
+                    <div style="clear:both; overflow:hidden; height:1px;"></div>
+                </form>
+                </div>
+                <div class="line"></div>
+        		<div id="choose-product">
+                <div style="margin-bottom:20px;"><h3>Choose a product</h3></div>
+                <form name="select-product">                	
+                    <input name="product" type="radio" value="Power bar gel" onclick="productController();"/>
+                    <label for="power-bar-gel">Power bar gel</label><br/>
+                    <input name="product" type="radio" value="Power bar hydro gel" onclick="productController();"/>
+					<label for="power-bar-hydro-gel">Power bar hydro gel</label><br/>
+                    <input name="product" type="radio" value="High 5" onclick="productController();"/>                    
+                    <label for="high-5">High 5</label><br/>
+                    <input name="product" type="radio" value="High 5 Isotonic" onclick="productController();"/>
+                    <label for="high-5-isotonic">High 5 Isotonic</label><br/>
+                    <input name="product" type="radio" value="SIS go gel" onclick="productController();"/>
+                    <label for="sis-go-gel">SIS go gel</label><br/>
+                    <input name="product" type="radio" value="Torq gel" onclick="productController();"/>
+                    <label for="torq-gel">Torq gel</label><br/>
+                    <input name="product" type="radio" value="Honey stinger gel" onclick="productController();"/>
+                    <label for="honey-stringer-gel">Honey stinger gel</label><br/>
+                    <input name="product" type="radio" value="Gu Gel" onclick="productController();"/>
+                    <label for="gu-gel">Gu Gel</label><br/>
+                    <input name="product" type="radio" value="Hammer Gel" onclick="productController();"/>
+                    <label for="hammer-gel">Hammer Gel</label>                    
+                </form>
+                </div>    
+                <div class="line"></div> 
+                
+                <div id="output-fields">                        
+                    <div style="margin-bottom:20px;"><h3>Output</h3></div>
+                        <div id="output-text">			
+                            <div class="output">Watts per kg</div> 
+                            <div class="output">kCal per hour</div> 
+                            <div class="output">Min Intake 35%</div> 
+                            <div class="output"  style="margin-right:0px;">Max Intake 60%</div>
+                        </div>
+                    <div id="output-result">
+                        <div class="result-number"><div id="watts-per-kg"></div></div>
+                        <div class="result-number"><div id="kCal-per-hour"></div></div> 
+                        <div class="result-number"><div id="min-intake"></div></div>
+                        <div class="result-number" style="margin-right:0px;"><div id="max-intake"></div></div>
+                    </div>
+                    <div id="result-explanation">
+                        Using <span id="product-of-choice" style="color:red; font-weight:bold"></span> you will be need to consume 1 gel every <span id="low-time" style="color:red; font-weight:bold"></span> minutes to every <span id="high-time" style="color:red; font-weight:bold;"></span> minutes in order to cover your nutrition needs. I don't recommend taking this product more than every <span id="max-rec" style="color:red; font-weight:bold"></span> minutes. If this is not within the required range you may find better results with another product.
+                    </div>
+                </div>
+                <div class="line"></div>                
+                <div id="products-table">
+                <div style="margin-bottom:20px;"><h3>Table</h3></div>
+                <table>
+                	<tr>
+                    	<th class="product">Product</th>
+                        <th>kCal</th>
+                        <th>CHO type</th>
+                        <th>Min per hr</th>
+                        <th>Max per hr</th>
+                        <th class="maxrec">Max recommended</th>
+                	</tr>
+                    <tr style="height:10px;">
+                    	<td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    	<td class="product">Power bar gel</td>
+                        <td>110</td>
+                        <td>glucose+fructose</td>
+                        <td id="min-intake0" class="min"></td>
+                        <td id="max-intake0" class="max"></td>
+                        <td id="max-rec0" class="rec"></td>
+                    </tr>
+                    <tr>
+                    	<td class="product">Power bar hydr</td>
+                        <td>109</td>
+                        <td>glucose+fructose</td>
+                        <td id="min-intake1" class="min"></td>
+                        <td id="max-intake1" class="max"></td>
+                        <td id="max-rec1" class="rec"></td>
+                    </tr>
+                    <tr>
+                    	<td class="product">High 5</td>
+                        <td>92</td>
+                        <td>glucose+fructose</td>
+                        <td id="min-intake2" class="min"></td>
+                        <td id="max-intake2" class="max"></td>
+                        <td id="max-rec2" class="rec"></td>
+                    </tr>
+                    <tr>
+                    	<td class="product">High 5 isotonic</td>
+                        <td>104</td>
+                        <td>glucose+fructose</td>
+                        <td id="min-intake3" class="min"></td>
+                        <td id="max-intake3" class="max"></td>
+                        <td id="max-rec3" class="rec"></td>
+                    </tr>
+                    <tr>
+                    	<td class="product">SIS go gel</td>
+                        <td>86</td>
+                        <td>glucose</td>
+                        <td id="min-intake4" class="min"></td>
+                        <td id="max-intake4" class="max"></td>
+                        <td id="max-rec4" class="rec"></td>
+                    </tr>
+                    <tr>
+                    	<td class="product">Torq gel</td>
+                        <td>115</td>
+                        <td>glucose+fructose</td>
+                        <td id="min-intake5" class="min"></td>
+                        <td id="max-intake5" class="max"></td>
+                        <td id="max-rec5" class="rec"></td>
+                    </tr>
+                    <tr>
+                    	<td class="product">Honey stinger gel</td>
+                        <td>120</td>
+                        <td>glucose</td>
+                        <td id="min-intake6" class="min"></td>
+                        <td id="max-intake6" class="max"></td>
+                        <td id="max-rec6" class="rec"></td>
+                    </tr>
+                    <tr>
+                    	<td class="product">Gu gel</td>
+                        <td>100</td>
+                        <td>glucose+fructose</td>
+                        <td id="min-intake7" class="min"></td>
+                        <td id="max-intake7" class="max"></td>
+                        <td id="max-rec7" class="rec"></td>
+                    </tr>
+                    <tr>
+                    	<td class="product">Hammer Gel</td>
+                        <td>90</td>
+                        <td>glucose</td>
+                        <td id="min-intake8" class="min"></td>
+                        <td id="max-intake8" class="max"></td>
+                        <td id="max-rec8" class="rec"></td>
+                    </tr>        
+                </table>
+                </div>
+
+			</div>
+					</div>
+	</div>
+    </div>
+
+
+<script src='http://code.jquery.com/jquery-latest.min.js'></script> 
+</body>
+</html>
