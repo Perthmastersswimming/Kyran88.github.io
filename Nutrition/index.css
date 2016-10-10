@@ -1,5 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic&subset=latin,latin-ext);
 
+html {
+  height: 100%;
+  margin: 20px;
+}
+
 /* Nutrition calculator */
 
 #nutrition-calculator-description {
@@ -29,6 +34,11 @@
   height: 27px;
   background-color: #DADADA;
   border: 1px solid #c2c2c2;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.button:hover {
+  background-color: #14B9FF;
 }
 
 #watts-per-kg {
@@ -57,11 +67,13 @@
 #input-fields {
   margin-top: 20px;
   margin-bottom: 30px;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 #choose-product {
   margin-top: 20px;
   margin-bottom: 30px;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .line {
@@ -94,11 +106,13 @@ label {
 #output-fields {
   margin: 20px 0 30px 0;
   float: left;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 #output-result {
   margin: 10px 0 10px 0;
   float: left;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 #result-explanation {
@@ -118,6 +132,7 @@ label {
 td {
   width: 129px;
   text-align: center;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .maxrec {
@@ -148,4 +163,5 @@ th {
 #products-table {
   margin-top: 20px;
   margin-bottom: 30px;
+  font-family: 'Noto Sans', sans-serif;
 }
