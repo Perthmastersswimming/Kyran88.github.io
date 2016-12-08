@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster|Play");
+body {
+  background: #023044;
+  font-family: 'Lobster', cursive;
+}
+
+.contents {
+  width: 100%;
+  min-height: 300px;
+}
+
+.ttl {
+  width: 100%;
+  margin: 0;
+  padding: 30px 0 0;
+  font-size: 52px;
+  text-align: center;
+  line-height: 1.1;
+  z-index: 2;
+  color: #F1F8E4;
+}
+
+p {
+  width: 4em;
+  margin: 20px auto 0;
+  padding: 10px 0;
+  font-size: 24px;
+  text-align: center;
+  color: #023044;
+  background: #F1F8E4;
+  display: block;
+  border-radius: 2em;
+}
+
+.layer-1 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: url(http://kyran88.github.io/pictures/1.svg) 0 100% repeat-x;
+  background-size: auto 10px;
+  z-index: 1;
+  animation: animation_layer linear 20s infinite both;
+}
+
+.layer-2 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: url(http://kyran88.github.io/pictures/2.svg) 0 100% repeat-x;
+  background-size: auto 120px;
+  z-index: 1;
+  animation: animation_layer linear 35s infinite both;
+}
+
+.layer-3 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: url(http://kyran88.github.io/pictures/3.svg) 0 100% repeat-x;
+  background-size: auto 200px;
+  z-index: 1;
+  animation: animation_layer linear 40s infinite both;
+}
+
+.layer-4 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: url(http://kyran88.github.io/pictures/4.svg) 0 100% repeat-x;
+  background-size: auto 140px;
+  z-index: 1;
+  animation: animation_layer linear 50s infinite both;
+}
+
+.layer-5 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: url(http://kyran88.github.io/pictures/5.svg) 0 100% repeat-x;
+  background-size: auto 130px;
+  z-index: 1;
+  animation: animation_layer linear 70s infinite both;
+}
+
+.layer-6 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: url(http://kyran88.github.io/pictures/6.svg) 0 100% repeat-x;
+  background-size: auto 250px;
+  z-index: 1;
+  animation: animation_layer linear 80s infinite both;
+}
+
+.santa {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(http://kyran88.github.io/pictures/santa.svg) 0 100% no-repeat;
+  background-size: auto 60px;
+  z-index: 1;
+  animation: animation_santa linear 10s infinite both;
+}
+
+@keyframes animation_layer {
+  0% {
+    background-position: 1000px 100%;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+@keyframes animation_santa {
+  0% {
+    background-position: -300px 100%;
+  }
+  100% {
+    background-position: 2000px 100%;
+  }
+}
