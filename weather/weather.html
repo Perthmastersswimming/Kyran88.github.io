@@ -2,64 +2,56 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
-<link href='https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.5/css/weather-icons.min.css' rel='stylesheet' type='text/css'>
-<link href='https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.5/css/weather-icons-wind.min.css' rel='stylesheet' type='text/css'>
-<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="http://Kyran88.github.io/weather/weather.css" />
 
 <title>Weather App</title>
 </head>
 <body>
 <main>
-  <div class="top hide" id="top-bar">
-    <div class="location-data">
-      <input class="location-data__input" id="location-input" type="text" title="Search for a Location"></input>
-      <label for="location-data__input" class="location-data__name" id="location-name">City, Country</label>
-      <button type="button" class="location-data__search-btn" id="search-btn"><i class="fa fa-search"></i></button>
-    </div>
-    <div class="datetime-data">
-      <div class="datetime-data__date" id="curr-date">{date}</div>
-      <div class="datetime-data__time" id="curr-time">{time}</div>
-    </div>
-  </div>
-
-  <div class="modal" id="modal">
-    <p>
-      This app needs JavaScript to run properly. </br>
-      Please, check your settings.
-    </p>
-  </div>
-
-  <div id="data" class="data hide">
-    <div class="main-data">
-      <div class="main-data__weather-icon"><i class="wi wi-owm-800" id="curr-weather-icon"></i></div>
-      <div class="main-data__temp">
-        <span id="curr-temp-value">{temperature}</span><span class="main-data__temp-units" id="temp-units">°C</span>
+<div class="container">
+  <div class="button">  </div>
+  <div class="weather-body">
+    <div class="row">
+      <div class="col-xs-4">
+        <h1 id="icon"></h1>
+        <h2 class="temp0"></h2>
+        <h5 class="feelslike"></h5>
+      
+      </div> 
+      <div class="col-xs-8"> 
+        <h2 class="city"></h2>
+        <h5 class="iconInfo"></h5>
+        <h6 class="info"></h6>
       </div>
-      <div class="main-data__weather-descr" id="curr-weather-descrip">{description}</div>
-    </div>
-
-    <div class="secondary-data">
-      <div class="secondary-data__pressure"><i class="wi wi-barometer"></i> <span id="curr-pressure">{pressure}</span></span>
-      </div>
-      <div class="secondary-data__humidity"><i class="wi wi-humidity"></i> <span id="curr-humidity">{humidity}</span></div>
-      <div class="secondary-data__wind"><i class="wi wi-wind-direction wi-from-sw" id="curr-wind-icon"></i> <span id="curr-wind-data">{wind}</span></div>
     </div>
   </div>
-</main>
-
-<div class="switch-btn">
-  <span class="units-label">°C</span>
-  <input type="checkbox" class="cmd-toggle" id="switch-units">
-  <label for="switch-units" class="switch-btn-label" title="fahrenheit/celsius"></label>
-  <span class="units-label">°F</span>
+  <div class="hr"></div>
+  <div class="row">
+    <div class="col-xs-3">
+      <p id="today"></p>
+      <p id="icon1"></p>
+      <p class="temp1"></p>
+    </div>
+    <div class="col-xs-3">
+      <p id="tomorrow"></p>
+      <p id="icon2"></p>
+      <p class="temp2"></p>
+    </div>
+    <div class="col-xs-3">
+      <p id="dayaftertomorrow"></p>
+      <p id="icon3"></p>
+      <p class="temp3"></p>
+    </div>
+    <div class="col-xs-3">
+      <p id="andthedayafter"></p>
+      <p id="icon4"></p>
+      <p class="temp4"></p>
+    </div>
+  </div>
 </div>
-
-<footer>
-  <div class="credit">Data from <a href="http://www.openweathermap.org" target="_blank">OpenWeatherMap</a>, Icons by <a href="http://erikflowers.github.io/weather-icons" target="_blank">Erik Flowers</a></div>
-  <div class="info">Developed by <a href="" target="_blank">Kyran</a></div>
-</footer>
+<div class="footerholder">Weather forecast data from <a href="https://forecast.io/">forecast.io</a>
+   | Weather icons thanks to <a href="https://erikflowers.github.io/weather-icons/ ">erikflowers</a>
+</div>
 <script type="text/javascript" src="http://kyran88.github.io/weather/script.js"></script>
 </body>
 </html>
