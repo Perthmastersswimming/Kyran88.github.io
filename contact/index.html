@@ -1,43 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+	<meta charset="UTF-8">
+	<title>AJAX Contact Form Demo</title>
+
 <link rel="stylesheet" href="/contact/style.css"/>
 <link rel="icon" type="image/ico" href="Kyran88.github.io/favicon (1).ico"/>
 </head>
 <body>
-<div class="bgtint"></div>
-<section class="bussinesscard">
-		<div class="flip">
-			<div class="front">				
-				<div class="top">				
-					<div class="logo"><span class="fat">K</span><span class="skinny">M</span></div>				
-				</div>
-				<div class="nametroduction">
-					<div class="name">Kyran McManus</div>
-					<div class="introduction">Hover over to See contact Details</div>
-				</div>	
-				<div class="contact">						
-					<div class="website">
-						<span class="fa fa-at"></span>
-						<a href="http://Kyran88.github.io/index.html">Back to Home Page</a>
-					</div>
-					<div class="lync">
-						<span class="fa fa-twitter"></span>
-						<a href="">twitter</a> 
-					</div>												
-					<div class="phone ">
-						<span class="fa fa-facebook-official"></span> 
-						<a href="#">facebook</a> 
-					</div>
-					<div class="email ">
-						<span class="fa fa-paper-plane"></span>
-						<a href="mailto:kmcmanus09@hotmail.com">Email Me</a>
-					</div>
-				</div>						
+	<div id="page-wrapper">
+	  <h1>AJAX Contact Form Demo</h1>
+
+	  <div id="form-messages"></div>
+		
+		<form id="ajax-contact" method="post" action="mailer.php">
+			<div class="field">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
 			</div>
-			<div class="back"></div> <!--FIXES FONT RENDERING -->
-		</div>
-	</section>
+
+			<div class="field">
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+			</div>
+
+			<div class="field">
+				<label for="message">Message:</label>
+				<textarea id="message" name="message" required></textarea>
+			</div>
+
+			<div class="field">
+				<button type="submit">Send</button>
+			</div>
+		</form>
+	</div>
+	
+	<script src="jquery-2.1.0.min.js"></script>
+	<script src="app.js"></script>
 </body>
 </html>
