@@ -79,14 +79,14 @@ h3 {
 }
 
 label {
-  text-align: left;
+  text-align: right;
   width: 110px;
   margin-right: 20px;
     color: #838080;
 }
 
 .nc-var-label {
-  margin-right: 118px;
+  margin-right: 10px;
 }
 
 .result-number {
