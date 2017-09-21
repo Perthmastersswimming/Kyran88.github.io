@@ -130,6 +130,6 @@ body {
   transition: 0.3s;
   z-index: 3;
 }
-.excerpt:hover a {
+.excerpt a:hover {
   background: #2c74a2;
 }
