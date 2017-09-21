@@ -82,7 +82,7 @@ body {
   z-index: 2;
 }
 
-.excerpt .linking {
+.excerpt {
   bottom: -100%;
   color: #fff;
   height: 100%;
@@ -91,10 +91,10 @@ body {
   transition: 0.4s;
   z-index: 2;
 }
-.inner:hover .excerpt .linking {
+.inner:hover .excerpt {
   bottom: 0;
 }
-.excerpt .linking:before {
+.excerpt:before {
   background: rgba(0, 0, 0, 0.8);
   content: '';
   height: 100%;
@@ -107,11 +107,11 @@ body {
 }
 
 @media (min-width: 40em) {
-  .excerpt .linking {
+  .excerpt {
     height: auto;
     padding: 0 10px 100px;
   }
-  .excerpt .linking:before {
+  .excerpt:before {
     transform: scale(1.35) rotate(3deg);
   }
 }
@@ -121,7 +121,7 @@ body {
   z-index: 3;
 }
 
-.excerpt .linking a {
+.excerpt a {
   background: #3891c9;
   color: inherit;
   padding: 5px 10px;
@@ -130,6 +130,6 @@ body {
   transition: 0.3s;
   z-index: 3;
 }
-.excerpt .linking:hover a {
+.excerpt:hover a {
   background: #2c74a2;
 }
