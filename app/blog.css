@@ -121,7 +121,7 @@ body {
   z-index: 3;
 }
 
-.linking {
+.linking a {
   background: #3891c9;
   color: inherit;
   padding: 5px 10px;
@@ -130,6 +130,6 @@ body {
   transition: 0.3s;
   z-index: 3;
 }
-.linking:hover {
+.linking:hover a {
   background: #2c74a2;
 }
