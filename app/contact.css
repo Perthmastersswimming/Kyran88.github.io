@@ -44,7 +44,7 @@ nav {
   text-align: center;
 }
 
-ul, li, a {
+ul, li, a1 {
   display: inline-block;
 }
 
@@ -56,7 +56,7 @@ li:last-child {
   border-right-color: transparent;
 }
 
-a {
+a1 {
   width: 64px;
   height: 64px;
   line-height: 64px;
@@ -69,10 +69,10 @@ a {
   -webkit-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
 }
-a:hover {
+a1:hover {
   background: linear-gradient(141deg, #0fb8ad 1%, #1fc8db 50%, #2cb5e8 80%);
 }
-a:active {
+a1:active {
   background: linear-gradient(141deg, #0fb8ad 1%, #1fc8db 50%, #2cb5e8 80%);
 }
 
