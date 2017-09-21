@@ -82,7 +82,7 @@ body {
   z-index: 2;
 }
 
-.excerpt {
+.excerpt linking {
   bottom: -100%;
   color: #fff;
   height: 100%;
@@ -94,7 +94,7 @@ body {
 .inner:hover .excerpt {
   bottom: 0;
 }
-.excerpt:before {
+.excerpt linking:before {
   background: rgba(0, 0, 0, 0.8);
   content: '';
   height: 100%;
@@ -107,11 +107,11 @@ body {
 }
 
 @media (min-width: 40em) {
-  .excerpt {
+  .excerpt linking {
     height: auto;
     padding: 0 10px 100px;
   }
-  .excerpt:before {
+  .excerpt linking:before {
     transform: scale(1.35) rotate(3deg);
   }
 }
