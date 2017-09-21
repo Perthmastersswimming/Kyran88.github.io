@@ -1,17 +1,22 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
-::selection {
-  background-color: #b3d4fc;
-}
+@import "compass/css3";
 
-::-moz-selection {
-  background-color: #b3d4fc;
+@import "compass/css3";
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
+
+::selection {
+  background-color: #b3d4fc; 
+} ::-moz-selection {
+  background-color: #b3d4fc; 
 }
 
 body {
   background-color: #FFF;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 16px;
-  color: #666;
+  
+  font: {
+    family: "Source Sans Pro", sans-serif;
+    size: 16px;
+  }
+  color: #666; // uhh, evil :)
 }
 
 .container {
@@ -27,17 +32,24 @@ body {
 }
 
 h1 {
-  text-align: center;
-  font-size: 48px;
-  font-weight: 300;
+  text: {
+    align: center;
+  }
+  font: {
+    size: 48px;
+    weight: 300;
+  }
+  
   letter-spacing: 0.1618em;
   line-height: 2.618em;
-}
-h1:hover {
-  cursor: default;
-}
-h1 span {
-  color: #2ecc71;
+  
+  &:hover {
+    cursor: default;
+  }
+  
+  span {
+    color: #0fb8ad;
+  }
 }
 
 nav {
@@ -51,9 +63,10 @@ ul, li, a {
 li {
   border-right: 1px solid #DDD;
   padding: 5px 7px 5px 5px;
-}
-li:last-child {
-  border-right-color: transparent;
+  
+  &:last-child {
+    border-right-color: transparent;
+  }
 }
 
 a {
@@ -62,16 +75,19 @@ a {
   line-height: 64px;
   text-decoration: none;
   color: #111;
-  font-family: "zocial", sans-serif;
-  font-size: 24px;
-  -moz-transition: background-color 0.15s ease-in-out;
-  -o-transition: background-color 0.15s ease-in-out;
-  -webkit-transition: background-color 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out;
-}
-a:hover {
-  background-color: #2ecc71;
-}
-a:active {
-  background-color: #25a25a;
+  
+  font: {
+    family: "zocial", sans-serif;
+    size: 24px;
+  }
+  
+  @include transition(background-color .15s ease-in-out);
+  
+  &:hover {
+    background: linear-gradient(141deg, #0fb8ad 1%,#1fc8db 50%,#2cb5e8 80%);
+  }
+  
+  &:active {
+    background: linear-gradient(141deg, #0fb8ad 1%,#1fc8db 50%,#2cb5e8 80%);
+  }
 }
