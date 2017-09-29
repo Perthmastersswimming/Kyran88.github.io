@@ -99,8 +99,6 @@ $(document).ready(function () {
     demoUrl: "hhttp://kyran88.github.io/bot/bot2.html",
     previewUrl: "http://kyran88.github.io/portfolio/icons/Chatbot.PNG",
     category: "meteor"
-  }, {
-	  
   }];
 
   var frontend = data.filter(function (item) {
