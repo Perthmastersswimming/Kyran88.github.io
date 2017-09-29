@@ -240,8 +240,9 @@ if (document.createElement("p").style.flex === undefined) {
 }
 
 $.backstretch([
-        "http://kyran88.github.io/portfolio/icons/Equipment.jpg",       "http://kyran88.github.io/portfolio/icons/workstation.jpg"
+        "http://kyran88.github.io/portfolio/icons/Equipment.jpg",
+  "http://kyran88.github.io/portfolio/icons/workstation.jpg"
     ],{
-        duration:20000,
+        duration:5000,
         fade: 'slow'
     });
