@@ -90,7 +90,7 @@ $(document).ready(function () {
     title: "Chatbot",
     description: "A chatbot powered by API.ai with debug json results",
     demoUrl: "http://kyran88.github.io/bot/bot.html",
-    previewUrl: "Kyran88.github.io/portfolio/icons/api ai chatbot.PNG",
+    previewUrl: "http://kyran88.github.io/portfolio/icons/api%20ai%20chatbot.PNG",
     category: "meteor"
   }, {
     id: 13,
