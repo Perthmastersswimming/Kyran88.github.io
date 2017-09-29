@@ -239,7 +239,9 @@ if (document.createElement("p").style.flex === undefined) {
   alert("no flexbox support");
 }
 
-$.backstretch(["http://kyran88.github.io/portfolio/icons/Equipment.jpg", "http://kyran88.github.io/portfolio/icons/workstation.jpg"], {
-  duration: 20000,
-  fade: 'slow'
-});
+$.backstretch([
+        "http://kyran88.github.io/portfolio/icons/Equipment.jpg",       "http://kyran88.github.io/portfolio/icons/workstation.jpg"
+    ],{
+        duration:20000,
+        fade: 'slow'
+    });
