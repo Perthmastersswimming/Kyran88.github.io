@@ -96,7 +96,7 @@ $(document).ready(function () {
     id: 13,
     title: "Chatbot 2",
     description: "A chatbot built with motion ai.",
-    demoUrl: "hhttp://kyran88.github.io/bot/bot2.html",
+    demoUrl: "http://kyran88.github.io/bot/bot2.html",
     previewUrl: "http://kyran88.github.io/portfolio/icons/Chatbot.PNG",
     category: "meteor"
   }];
