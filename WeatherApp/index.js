@@ -279,7 +279,7 @@ $(document).ready(function(){
 		
 		if ( LocalSettings === null )
 		{
-			var Settings = '1,1,1,1,' + arrayThemes[randomTheme] + ',Location';
+			var Settings = '1,1,1,1,' + arrayThemes[randomTheme] + ',London';
 			SettingsArray = Settings.split(',');
 
 			getWeather('London');
