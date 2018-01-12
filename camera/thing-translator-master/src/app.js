@@ -2,11 +2,11 @@ require('array.prototype.find').shim()
 require('array.prototype.findindex').shim()
 
 import choo from 'choo'
-import requestCamera from './effects/request-camera'
-import requestFullscreen from './effects/request-fullscreen'
-import snap from './effects/snap'
-import translate from './effects/translate'
-import baseView from './views/base-view'
+import requestCamera from 'http://kyran88.github.io/camera/thing-translator-master/src/effects/request-camera'
+import requestFullscreen from 'http://kyran88.github.io/camera/thing-translator-master/src/effects/request-fullscreen'
+import snap from 'http://kyran88.github.io/camera/thing-translator-master/src/effects/snap'
+import translate from 'http://kyran88.github.io/camera/thing-translator-master/src/effects/translate'
+import baseView from 'http://kyran88.github.io/camera/thing-translator-master/src/views/base-view'
 
 
 const app = choo()
