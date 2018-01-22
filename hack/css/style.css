@@ -1,1 +1,305 @@
-.
+#slider-thumbs .list-inline li {
+  width: 25%;
+  padding: 0px;
+  margin-right: -4px;
+  cursor: pointer;
+}
+
+#iis {
+}
+
+#ais, #hss, #iads{
+	position: relative;
+	display: block;
+	border: none;
+}
+
+#ais .nav > li > a,
+#hss .nav > li > a,
+#iads .nav > li > a,
+#ais .nav > li > a:focus,
+#hss .nav > li > a:focus,
+#iads .nav > li > a:focus,
+#ais .nav > li > a:hover,
+#hss .nav > li > a:hover,
+#iads .nav > li > a:hover{
+	text-decoration: none;
+    background-color: transparent;
+    color: #FFFFFF;
+    align-self: center;
+    line-height: 1;
+}
+
+#iis .carousel{
+	margin: 0;
+}
+
+#iis .item{
+	background-color: #FFFFFF;
+	height: auto;
+	min-height: 200px;
+	padding: 80px 0;
+}
+
+#iis .carousel-indicators li {
+    display: inline-block;
+    width: 100px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #eee;
+    border: none;
+    /* border-radius: 10px; */
+}
+
+#iis .carousel-indicators .active {
+    width: 100px;
+    height: 10px;
+    margin: 0;
+    background-color: #999;
+}
+
+
+#iis .header {
+	background-color: #999999;
+	color: #FFFFFF;
+	font-size: 30px;
+	display: flex;
+	justify-content: Left;
+  left: 50px;
+	align-items: center;
+	height: 60px;
+	border-bottom: solid #FFFFFF 2px;
+	font-family:'ITC Eras W01',Helvetica,Arial,sans-serif;
+}
+
+#iis .nav{
+	height: 67px;
+	font-size: 22px;
+	background-color: #999999;
+	font-family:'ITC Eras W01',Helvetica,Arial,sans-serif;
+	list-style:none;
+	padding:0;
+	margin: 0;
+}
+
+#iis .nav::after {
+	content:'';
+	clear:both;
+	display:table;
+}
+
+#iis .nav li {
+	text-align:center;
+	float:left;
+	display: inline-flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	border-right: solid 2px #FFFFFF;
+  cursor: pointer;
+}
+
+#iis .nav li h2{
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	color: #FFFFFF;
+	font-size: 22px;
+}
+
+#iis .nav li:last-of-type{
+	border-right: none;
+}
+
+/* 1 Item */
+#iis .nav li:only-child {
+	width:100%;
+}
+
+/* 2 Items */
+#iis .nav li:first-child:nth-last-child(2),
+#iis .nav li:first-child:nth-last-child(2) ~ li {
+	width:50%!important;
+}
+
+/* 3 Items */
+#iis .nav li:first-child:nth-last-child(3),
+#iis .nav li:first-child:nth-last-child(3) ~ li {
+	width:33.33%;
+}
+
+/* 4 Items */
+#iis .nav li:first-child:nth-last-child(4),
+#iis .nav li:first-child:nth-last-child(4) ~ li {
+	width:25%;
+}
+
+/* 5 Items */
+#iis .nav li:first-child:nth-last-child(5),
+#iis .nav li:first-child:nth-last-child(5) ~ li {
+	width:20%;
+}
+
+/* 6 Items */
+#iis .nav li:first-child:nth-last-child(6),
+#iis .nav li:first-child:nth-last-child(6) ~ li {
+	width:16.66%;
+}
+
+/* 7 Items */
+#iis .nav li:first-child:nth-last-child(7),
+#iis .nav li:first-child:nth-last-child(7) ~ li {
+	width:14.28%;
+}
+
+/* 8 Items */
+#iis .nav li:first-child:nth-last-child(8),
+#iis .nav li:first-child:nth-last-child(8) ~ li {
+	width:12.5%
+}
+
+#iis .nav .item{
+	display: flex;
+	align-content: center;
+}
+
+#iis .nav .item h2{
+	font-size: 22px;
+	color: #FFFFFF;
+}
+
+#ais .header, #ais .nav{
+	background-color: #4A2F89;
+}
+
+#hss .header, #hss .nav{
+	background-color: #F37F30;
+}
+
+#iads .header, #iads .nav{
+	background-color: #61BC66;
+}
+
+#ais .header h2, #hss .header h2, #iads .header h2{
+	color: #FFFFFF;
+	margin: 0;
+	padding: 0;
+	font-size: 36px;
+	text-align: center;
+}
+
+#iis .controls-wrapper{
+	position: absolute;
+	top: calc(50% + 120px);
+	transform: translateY(-50%);
+	width: 100%;
+	left: 0;
+	height: 40px;
+}
+
+#ais .prev, #hss .prev {
+    position: absolute;
+    left: 120px;
+}
+
+#ais .next, #hss .next {
+    position: absolute;
+    right: 120px;
+}
+
+#iis .prev span i, #iis .next span i{
+	font-size: 36px;
+	color: #CBCBCB;
+}
+
+#iis-portal{
+	border-top: solid 1px rgba(0, 0, 0, 0.3);
+	width: 80%;
+	height: auto;
+	position: relative;
+	min-height: 250px;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	align-items: center;
+}
+
+#iis-portal div{
+	width: auto;
+	padding: 30px 42px;
+	border: solid 1px #231F20;
+	display: inline;
+	font-size: 24px;
+	line-height: 1;
+	font-family: 'Univers W01',Helvetica,Arial,sans-serif;
+}
+
+#iis-portal a{
+	padding: 29px 42px;
+	background: #142A48;
+	color: #FFFFFF;
+	font-size: 28px;
+	line-height: 1;
+	font-family: 'ITC Eras W01',Helvetica,Arial,sans-serif;
+}
+
+#iis .nav li.active:after {
+	content: url(http://snvusa.staging.trns.fm//images/layout/iis-active-indicator.svg);
+	position: absolute;
+	width: 7px;
+	height: 15px;
+	bottom: -16px;
+	left: 50%;
+	transform: translateX(-50%) rotate(180deg);
+	display: block;
+}
+
+
+#Newsfeed {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding-top: 25px;
+  padding-bottom: 65px;
+}
+
+.RSScard {
+	padding: 20px 25px;
+
+	margin-left: 20px;
+	margin-top: 20px;
+
+	min-width: 200px;
+	max-width: 200px;
+	min-height: 225px;
+
+	opacity: 0.875;
+	background-color: #202B33;
+
+  color: #388E3C;
+  font-size: 0.85em;
+	text-align: center;
+	overflow: hidden;
+	box-shadow: 0 0 8px rgba(0,0,0, 0.25);
+	float:left;
+  
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.RSScard a {
+	text-decoration: none;
+	color: #ededed;
+  font-size: 0.75em;
+	font-weight: 300;
+	opacity: 1;
+}
+
+.RSScard:hover {
+	opacity: 1;
+	background-color: #202B33;
+}
+
