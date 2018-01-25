@@ -1,5 +1,5 @@
 $('#ais').carousel({
-  interval: 4000
+  interval: 10000
 });
 
 // handles the carousel thumbnails
