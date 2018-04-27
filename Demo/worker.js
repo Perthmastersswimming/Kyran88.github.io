@@ -5,7 +5,7 @@ self.addEventListener('install', function(event) {
         return cache.addAll([
             '/',
             '/index.html',
-            '/assets/ushakov.png',
+            '/assets/chataiwhite.png',
             '/assets/manifest_icons/web_hi_res_512.png',
             '/dist/build.js',
             'https://fonts.googleapis.com/icon?family=Material+Icons',
